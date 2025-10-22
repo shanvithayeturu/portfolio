@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanvitha Yeturu | Data Engineer Portfolio</title>
+    <title>Shanvitha Yeturu | Software Engineer Portfolio</title>
     <style>
         * { 
             margin: 0; 
@@ -15,7 +15,7 @@
         body { 
             line-height: 1.6; 
             color: #333;
-            background: #fff;
+            background: #f8f9fa;
         }
         
         .container { 
@@ -26,14 +26,14 @@
         
         /* Header */
         header { 
-            background: #2c3e50; 
+            background: #2d3748; 
             color: white; 
             padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
         
         nav { 
@@ -45,6 +45,7 @@
         .logo { 
             font-size: 1.5rem; 
             font-weight: bold; 
+            color: #e2e8f0;
         }
         
         .nav-links { 
@@ -54,19 +55,19 @@
         }
         
         .nav-links a { 
-            color: white; 
+            color: #e2e8f0; 
             text-decoration: none; 
             font-weight: 500;
             transition: color 0.3s ease;
         }
         
         .nav-links a:hover { 
-            color: #3498db; 
+            color: #a0aec0; 
         }
         
         /* Hero Section */
         .hero { 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
             color: white;
             padding: 150px 0 100px;
             text-align: center;
@@ -76,6 +77,7 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             animation: fadeInUp 1s ease;
+            color: #f7fafc;
         }
         
         .hero p {
@@ -83,6 +85,7 @@
             margin-bottom: 0.5rem;
             opacity: 0.9;
             animation: fadeInUp 1s ease 0.2s both;
+            color: #e2e8f0;
         }
         
         .profile-placeholder {
@@ -90,13 +93,14 @@
             height: 180px;
             border-radius: 50%;
             background: rgba(255,255,255,0.1);
-            border: 4px solid white;
+            border: 4px solid #a0aec0;
             margin: 0 auto 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 0.9rem;
             animation: fadeIn 1s ease 0.4s both;
+            color: #e2e8f0;
         }
         
         .btn-container {
@@ -116,14 +120,14 @@
         }
         
         .btn-primary {
-            background: #3498db;
+            background: #718096;
             color: white;
         }
         
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid white;
+            border: 2px solid #a0aec0;
         }
         
         .btn:hover {
@@ -132,12 +136,12 @@
         }
         
         .btn-primary:hover {
-            background: #2980b9;
+            background: #4a5568;
         }
         
         .btn-secondary:hover {
-            background: white;
-            color: #764ba2;
+            background: #a0aec0;
+            color: #2d3748;
         }
         
         /* Sections */
@@ -149,13 +153,13 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            color: #2c3e50;
+            color: #2d3748;
         }
         
         /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
             gap: 2.5rem;
             margin-top: 2rem;
         }
@@ -164,24 +168,24 @@
             background: white;
             border-radius: 12px;
             padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
+            border: 1px solid #e2e8f0;
         }
         
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
         }
         
         .project-card h3 {
-            color: #2c3e50;
+            color: #2d3748;
             margin-bottom: 1rem;
             font-size: 1.4rem;
         }
         
         .project-card p {
-            color: #666;
+            color: #4a5568;
             margin-bottom: 1.5rem;
             line-height: 1.7;
         }
@@ -194,34 +198,18 @@
         }
         
         .tech-tag {
-            background: #e7f3ff;
-            color: #3498db;
+            background: #edf2f7;
+            color: #4a5568;
             padding: 6px 14px;
             border-radius: 20px;
             font-size: 0.8rem;
             font-weight: 600;
-        }
-        
-        .project-links {
-            margin-top: 1.5rem;
-        }
-        
-        .project-links a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            margin-right: 1.5rem;
-            transition: color 0.3s ease;
-        }
-        
-        .project-links a:hover {
-            color: #2980b9;
-            text-decoration: underline;
+            border: 1px solid #e2e8f0;
         }
         
         /* About Section */
         .about {
-            background: #f8f9fa;
+            background: #edf2f7;
         }
         
         .about-content {
@@ -234,7 +222,7 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 3rem;
-            color: #555;
+            color: #4a5568;
         }
         
         .skills-grid {
@@ -248,17 +236,18 @@
             background: white;
             padding: 2rem;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
         }
         
         .skill-category h4 {
-            color: #2c3e50;
+            color: #2d3748;
             margin-bottom: 1rem;
             font-size: 1.2rem;
         }
         
         .skill-category p {
-            color: #666;
+            color: #4a5568;
             line-height: 1.6;
         }
         
@@ -270,7 +259,7 @@
         .contact p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
-            color: #666;
+            color: #4a5568;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -284,7 +273,7 @@
             display: inline-block;
             margin: 0 15px;
             padding: 12px 25px;
-            background: #3498db;
+            background: #4a5568;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -292,14 +281,14 @@
         }
         
         .social-links a:hover {
-            background: #2980b9;
+            background: #2d3748;
             transform: translateY(-2px);
         }
         
         /* Footer */
         footer {
-            background: #2c3e50;
-            color: white;
+            background: #2d3748;
+            color: #e2e8f0;
             text-align: center;
             padding: 2rem;
             margin-top: 2rem;
@@ -325,7 +314,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* We'll keep it simple for now */
+                display: none;
             }
             
             .hero h1 {
@@ -371,8 +360,8 @@
                 Add Your Photo Here
             </div>
             <h1>Shanvitha Yeturu</h1>
-            <p>MSc IoT Student @ Dublin City University</p>
-            <p>Aspiring Data Engineer | Python | SQL | Distributed Systems</p>
+            <p>MSc Electronic and Computer Technology Student @ Dublin City University</p>
+            <p>Software Engineer</p>
             <div class="btn-container">
                 <a href="#projects" class="btn btn-primary">View My Projects</a>
                 <a href="#contact" class="btn btn-secondary">Get In Touch</a>
@@ -387,49 +376,26 @@
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <h3>Real-Time Anomaly Detection Pipeline</h3>
-                    <p>A distributed data pipeline using Kafka and Spark to detect fraudulent patterns in real-time streaming transaction data. Implements unsupervised machine learning for anomaly detection.</p>
+                    <h3>Auto-Trigger Wishes Bot</h3>
+                    <p>Developed an automated system that sends personalized birthday and anniversary emails to employees. The bot integrates with company databases and uses Python for automated email creation and scheduling with minimal human intervention.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Apache Kafka</span>
-                        <span class="tech-tag">PySpark</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Machine Learning</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/anomaly-detection" target="_blank">View Code →</a>
-                        <a href="https://github.com/yourusername/anomaly-detection/blob/main/README.md" target="_blank">Live Demo →</a>
+                        <span class="tech-tag">Automation Anywhere</span>
+                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">Email Automation</span>
+                        <span class="tech-tag">SQL</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>ETL Data Pipeline with Airflow</h3>
-                    <p>Orchestrated data pipeline to extract, transform and load data from multiple sources. Features automated scheduling, data validation, and monitoring with custom dashboards.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Apache Airflow</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Data Engineering</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/etl-pipeline" target="_blank">View Code →</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Cloud E-Commerce Platform</h3>
-                    <p>Full-stack e-commerce application with React frontend and cloud deployment. Features user authentication, payment processing, and scalable cloud architecture on AWS.</p>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Built a full-stack e-commerce website. Features include user authentication, shopping cart functionality, payment processing, and scalable cloud architecture with SQL database management.</p>
                     <div class="tech-stack">
                         <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">AWS</span>
                         <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/yourusername/ecommerce-platform" target="_blank">View Code →</a>
-                        <a href="https://your-demo-link.com" target="_blank">Live Demo →</a>
+                        <span class="tech-tag">HTML/CSS</span>
                     </div>
                 </div>
 
@@ -443,24 +409,23 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <p class="about-text">
-                    I'm an MSc student in Electronics and Computer Technology (IoT) at Dublin City University, 
-                    transitioning from professional Robotics Process Automation development to Data Engineering. 
-                    I'm passionate about building scalable data systems, real-time processing, and solving complex 
-                    problems with code. Currently building projects with modern data technologies while completing my master's degree.
+                    I'm a Software Engineer and MSc student in Electronics and Computer Technology (Data Analysis and ML, Web application development,IoT) at Dublin City University, 
+                    with professional experience in automation development. I specialize in creating 
+                    efficient, scalable software solutions that solve real-world problems. My background in both process automation 
+                    and modern web technologies allows me to bridge the gap between business requirements and technical implementation.
                 </p>
                 
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h4>Languages & Core</h4>
-                        <p>Python, SQL, Java, JavaScript, HTML/CSS</p>
+                        <h4>Programming</h4>
+                        <p>Python, JavaScript, Java, HTML/CSS</p>
+                    <div class="skill-category">
+                        <h4>Data & Automation</h4>
+                        <p>SQL, Automation Anywhere, Process Automation</p>
                     </div>
                     <div class="skill-category">
-                        <h4>Data Engineering</h4>
-                        <p>Apache Kafka, Spark, Airflow, PostgreSQL, ETL/ELT</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Cloud & DevOps</h4>
-                        <p>AWS, Docker, Git, CI/CD, Distributed Systems</p>
+                        <h4>Cloud & Tools</h4>
+                        <p>AWS, Git</p>
                     </div>
                 </div>
             </div>
@@ -472,12 +437,12 @@
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
             <p>
-                I'm currently looking for graduate opportunities in Data Engineering, Platform Engineering, 
+                I'm currently looking for graduate opportunities in Software Engineering,
                 and related roles in Ireland. Feel free to reach out if you'd like to connect!
             </p>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/shanvithayeturu/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+                <a href="https://github.com/shanvithayeturu" target="_blank">GitHub</a>
                 <a href="mailto:shanvitha2412@gmail.com">Email Me</a>
             </div>
         </div>
