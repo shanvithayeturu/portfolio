@@ -1,456 +1,458 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shanvitha Yeturu | Software Engineer Portfolio</title>
-    <style>
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        }
-        
-        body { 
-            line-height: 1.6; 
-            color: #333;
-            background: #f8f9fa;
-        }
-        
-        .container { 
-            max-width: 1200px; 
-            margin: 0 auto; 
-            padding: 0 2rem; 
-        }
-        
-        /* Header */
-        header { 
-            background: #2d3748; 
-            color: white; 
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-        
-        nav { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-        }
-        
-        .logo { 
-            font-size: 1.5rem; 
-            font-weight: bold; 
-            color: #e2e8f0;
-        }
-        
-        .nav-links { 
-            display: flex; 
-            list-style: none; 
-            gap: 2rem; 
-        }
-        
-        .nav-links a { 
-            color: #e2e8f0; 
-            text-decoration: none; 
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover { 
-            color: #a0aec0; 
-        }
-        
-        /* Hero Section */
-        .hero { 
-            background: linear-gradient(135deg, #4a5568 0%, #2d3748 100%);
-            color: white;
-            padding: 150px 0 100px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease;
-            color: #f7fafc;
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease 0.2s both;
-            color: #e2e8f0;
-        }
-        
-        .profile-placeholder {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            border: 4px solid #a0aec0;
-            margin: 0 auto 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            animation: fadeIn 1s ease 0.4s both;
-            color: #e2e8f0;
-        }
-        
-        .btn-container {
-            margin-top: 2rem;
-            animation: fadeInUp 1s ease 0.6s both;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 14px 35px;
-            margin: 0 10px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .btn-primary {
-            background: #718096;
-            color: white;
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid #a0aec0;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-        }
-        
-        .btn-primary:hover {
-            background: #4a5568;
-        }
-        
-        .btn-secondary:hover {
-            background: #a0aec0;
-            color: #2d3748;
-        }
-        
-        /* Sections */
-        section { 
-            padding: 100px 0; 
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #2d3748;
-        }
-        
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-            margin-top: 2rem;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border: 1px solid #e2e8f0;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-        }
-        
-        .project-card h3 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-size: 1.4rem;
-        }
-        
-        .project-card p {
-            color: #4a5568;
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-        
-        .tech-stack {
-            margin: 1.5rem 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-        
-        .tech-tag {
-            background: #edf2f7;
-            color: #4a5568;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border: 1px solid #e2e8f0;
-        }
-        
-        /* About Section */
-        .about {
-            background: #edf2f7;
-        }
-        
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 3rem;
-            color: #4a5568;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-        
-        .skill-category {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-            border: 1px solid #e2e8f0;
-        }
-        
-        .skill-category h4 {
-            color: #2d3748;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .skill-category p {
-            color: #4a5568;
-            line-height: 1.6;
-        }
-        
-        /* Contact */
-        .contact {
-            text-align: center;
-        }
-        
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: #4a5568;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .social-links {
-            margin-top: 2rem;
-        }
-        
-        .social-links a {
-            display: inline-block;
-            margin: 0 15px;
-            padding: 12px 25px;
-            background: #4a5568;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            background: #2d3748;
-            transform: translateY(-2px);
-        }
-        
-        /* Footer */
-        footer {
-            background: #2d3748;
-            color: #e2e8f0;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 2rem;
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .btn {
-                display: block;
-                margin: 10px auto;
-                width: 200px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shanvitha Yeturu | Software Engineer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <!-- Meta Tags -->
+  <meta name="description" content="Portfolio of Shanvitha Yeturu — Software Engineer specializing in automation, data analysis, and web development.">
+  <meta name="keywords" content="Shanvitha Yeturu, Software Engineer, Portfolio, Python, React, Automation, Dublin City University">
+  <meta name="author" content="Shanvitha Yeturu">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #2d3748;
+      background: #f9fafb;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header */
+    header {
+      background: #2d3748;
+      color: white;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      color: #81e6d9;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: #e2e8f0;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #81e6d9;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #2c7a7b 0%, #285e61 100%);
+      color: white;
+      padding: 160px 0 100px;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+      border: 4px solid transparent;
+      background: linear-gradient(white, white) padding-box,
+                  linear-gradient(135deg, #81e6d9, #2c7a7b) border-box;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      opacity: 0.95;
+      animation: fadeInUp 1s ease 0.2s both;
+    }
+
+    .btn-container {
+      margin-top: 2rem;
+      animation: fadeInUp 1s ease 0.4s both;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 30px;
+      margin: 0 10px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: #319795;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #2c7a7b;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid #81e6d9;
+    }
+
+    .btn-secondary:hover {
+      background: #81e6d9;
+      color: #2d3748;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Sections */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.4rem;
+      margin-bottom: 3rem;
+      font-family: 'Poppins', sans-serif;
+      color: #2d3748;
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-card h3 {
+      color: #2d3748;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .project-card p {
+      color: #4a5568;
+      margin-bottom: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .tech-stack {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-tag {
+      background: #e6fffa;
+      color: #285e61;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid #b2f5ea;
+    }
+
+    /* About Section */
+    .about {
+      background: #edf2f7;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      color: #4a5568;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .skill-category {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e2e8f0;
+    }
+
+    .skill-category h4 {
+      color: #2d3748;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .skill-category p {
+      color: #4a5568;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #4a5568;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin: 0 15px;
+      padding: 12px 25px;
+      background: #319795;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: #2c7a7b;
+      transform: translateY(-3px);
+    }
+
+    /* Footer */
+    footer {
+      background: #2d3748;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 2rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .btn {
+        display: block;
+        margin: 10px auto;
+        width: 200px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">Shanvitha Yeturu</div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <!-- Navigation -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Shanvitha Yeturu</div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <img src="profile.png" alt="Shanvitha Yeturu" class="profile-pic">
+      <h1>Shanvitha Yeturu</h1>
+      <p>MSc Electronic and Computer Technology @ Dublin City University</p>
+      <p>Software Engineer | Automation | Web & Data Enthusiast</p>
+      <div class="btn-container">
+        <a href="#projects" class="btn btn-primary">View My Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <a href="resume.pdf" target="_blank" class="btn btn-secondary">Download Résumé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Auto-Trigger Wishes Bot</h3>
+          <p>Developed an automated system that sends personalized birthday and anniversary emails to employees. The bot integrates with company databases and uses Python for automated email creation and scheduling.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Automation Anywhere</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Email Automation</span>
+          </div>
+          <a href="https://github.com/shanvithayeturu" target="_blank" class="btn btn-primary" style="margin-top:1rem;">View Code</a>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <img src="profile.png" alt="Shanvitha Yeturu" class="profile-pic" style="width: 180px; height: 180px; border-radius: 50%; border: 4px solid #a0aec0; margin: 0 auto 2rem;">
-            <h1>Shanvitha Yeturu</h1>
-            <p>MSc Electronic and Computer Technology Student @ Dublin City University</p>
-            <p>Software Engineer</p>
-            <div class="btn-container">
-                <a href="#projects" class="btn btn-primary">View My Projects</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-            </div>
+        <div class="project-card">
+          <h3>E-Commerce Platform</h3>
+          <p>Built a full-stack e-commerce website featuring user authentication, cart functionality, payment integration, and scalable cloud architecture with SQL database management.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React.js</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">AWS</span>
+            <span class="tech-tag">SQL</span>
+          </div>
+          <a href="https://github.com/shanvithayeturu" target="_blank" class="btn btn-primary" style="margin-top:1rem;">View Code</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card">
-                    <h3>Auto-Trigger Wishes Bot</h3>
-                    <p>Developed an automated system that sends personalized birthday and anniversary emails to employees. The bot integrates with company databases and uses Python for automated email creation and scheduling with minimal human intervention.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Automation Anywhere</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                        <span class="tech-tag">Email Automation</span>
-                        <span class="tech-tag">SQL</span>
-                    </div>
-                </div>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p class="about-text">
+          I'm a Software Engineer and MSc student in Electronics and Computer Technology at Dublin City University,
+          focusing on Data Analysis, Machine Learning, Web Development, and IoT.  
+          I specialize in creating efficient, scalable software solutions that solve real-world problems — bridging the gap between business needs and modern technology.
+        </p>
 
-                <div class="project-card">
-                    <h3>E-Commerce Platform</h3>
-                    <p>Built a full-stack e-commerce website. Features include user authentication, shopping cart functionality, payment processing, and scalable cloud architecture with SQL database management.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                    </div>
-                </div>
-
-            </div>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Programming</h4>
+            <p>Python, JavaScript, Java, HTML/CSS</p>
+          </div>
+          <div class="skill-category">
+            <h4>Data & Automation</h4>
+            <p>SQL, Automation Anywhere, Process Automation</p>
+          </div>
+          <div class="skill-category">
+            <h4>Cloud & Tools</h4>
+            <p>AWS, Git</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p class="about-text">
-                    I'm a Software Engineer and MSc student in Electronics and Computer Technology (Data Analysis and ML, Web application development,IoT) at Dublin City University, 
-                    with professional experience in automation development. I specialize in creating 
-                    efficient, scalable software solutions that solve real-world problems. My background in both process automation 
-                    and modern web technologies allows me to bridge the gap between business requirements and technical implementation.
-                </p>
-                
-                <div class="skills-grid">
-                    <div class="skill-category">
-                        <h4>Programming</h4>
-                        <p>Python, JavaScript, Java, HTML/CSS</p>
-                    <div class="skill-category">
-                        <h4>Data & Automation</h4>
-                        <p>SQL, Automation Anywhere, Process Automation</p>
-                    </div>
-                    <div class="skill-category">
-                        <h4>Cloud & Tools</h4>
-                        <p>AWS, Git</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p>
+        I'm currently seeking graduate opportunities in Software Engineering and related roles in Ireland.  
+        Feel free to reach out if you'd like to collaborate or connect!
+      </p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/shanvithayeturu/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/shanvithayeturu" target="_blank">GitHub</a>
+        <a href="mailto:shanvitha2412@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p>
-                I'm currently looking for graduate opportunities in Software Engineering,
-                and related roles in Ireland. Feel free to reach out if you'd like to connect!
-            </p>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/shanvithayeturu/" target="_blank">LinkedIn</a>
-                <a href="https://github.com/shanvithayeturu" target="_blank">GitHub</a>
-                <a href="mailto:shanvitha2412@gmail.com">Email Me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Shanvitha Yeturu. Built with HTML & CSS. Hosted on GitHub Pages.</p>
-        </div>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Shanvitha Yeturu · Built with ❤️ using HTML & CSS · Hosted on GitHub Pages</p>
+    </div>
+  </footer>
 </body>
 </html>
